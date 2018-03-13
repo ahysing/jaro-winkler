@@ -59,7 +59,7 @@ func jaroWinkler(s1 string, s2 string) float64 {
 	if c == 0 {
 		return 0.0
 	} else {
-		var score float64 = float64(c)/float64(len(s1)) + float64(c)/float64(len(s2)) + (float64(c)-float64(t))/float64(c)/3.0
+		var score float64 = (float64(c)/float64(lenS1) + float64(c)/float64(lenS2) + (float64(c)-float64(t))/float64(c)) / 3.0
 		// (2) common prefix modification
 		var last int
 		if len(s1) < 4 {
